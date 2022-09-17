@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FDB29DA-F072-4EA6-AC41-2EF9F481BD77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Identer</RootNamespace>
+    <AssemblyName>Identer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPdf, Version=2020.3.2.0, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPdf.2020.3.2\lib\net40\IronPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPdf.Assets.Rendering.Windows, Version=18.0.0.0, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iron.Assets.Rendering.Windows.18.0.1\lib\net40\IronPdf.Assets.Rendering.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twilio, Version=5.39.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.39.0\lib\net451\Twilio.dll</HintPath>
+    </Reference>
+    <Reference Include="WebCam_Capture">
+      <HintPath>C:\Users\m\source\repos\webcamTest\webcamTest\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin Forms\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\acceptedCarLicenseListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\acceptedCarLicenseListItem.Designer.cs">
+      <DependentUpon>acceptedCarLicenseListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\CarLicenseLiatItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\CarLicenseLiatItem.Designer.cs">
+      <DependentUpon>CarLicenseLiatItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\acceptedDrivingLicenseItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\acceptedDrivingLicenseItem.Designer.cs">
+      <DependentUpon>acceptedDrivingLicenseItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\acceptedListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\acceptedListItem.Designer.cs">
+      <DependentUpon>acceptedListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\DrivingLicenseListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\DrivingLicenseListItem.Designer.cs">
+      <DependentUpon>DrivingLicenseListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\ListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\ItemLists\ListItem.Designer.cs">
+      <DependentUpon>ListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\Requests.Designer.cs">
+      <DependentUpon>Requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\showUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\showUsers.Designer.cs">
+      <DependentUpon>showUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlertClass.cs" />
+    <Compile Include="Cards Designs\CarLicenseDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards Designs\CarLicenseDesign.Designer.cs">
+      <DependentUpon>CarLicenseDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards Designs\CruiseLicenseDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards Designs\CruiseLicenseDesign.Designer.cs">
+      <DependentUpon>CruiseLicenseDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards Designs\DrivingLicenseDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards Designs\DrivingLicenseDesign.Designer.cs">
+      <DependentUpon>DrivingLicenseDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards Designs\idCardDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards Designs\idCardDesign.Designer.cs">
+      <DependentUpon>idCardDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards Designs\WeaponLicenseDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards Designs\WeaponLicenseDesign.Designer.cs">
+      <DependentUpon>WeaponLicenseDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarLicenseData.cs" />
+    <Compile Include="CheckInput.cs" />
+    <Compile Include="drivingLicenseUser.cs" />
+    <Compile Include="Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Alert.Designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="htmlPayment.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\cameraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\cameraForm.Designer.cs">
+      <DependentUpon>cameraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateCarLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateCarLicense.Designer.cs">
+      <DependentUpon>CreateCarLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateCruiseLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateCruiseLicense.Designer.cs">
+      <DependentUpon>CreateCruiseLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateDrivingLicense.Designer.cs">
+      <DependentUpon>CreateDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateId.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateId.Designer.cs">
+      <DependentUpon>CreateId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateWeaponLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\Creaters\CreateWeaponLicense.Designer.cs">
+      <DependentUpon>CreateWeaponLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\finish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\finish.Designer.cs">
+      <DependentUpon>finish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\PaymentMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\PaymentMethod.Designer.cs">
+      <DependentUpon>PaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Forms\UserMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\UserMain.Designer.cs">
+      <DependentUpon>UserMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Verification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\Verification.Designer.cs">
+      <DependentUpon>Verification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="WebCam.cs" />
+    <Compile Include="Xml.cs" />
+    <EmbeddedResource Include="Admin Forms\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\ItemLists\acceptedCarLicenseListItem.resx">
+      <DependentUpon>acceptedCarLicenseListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\ItemLists\CarLicenseLiatItem.resx">
+      <DependentUpon>CarLicenseLiatItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\ItemLists\acceptedDrivingLicenseItem.resx">
+      <DependentUpon>acceptedDrivingLicenseItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\ItemLists\acceptedListItem.resx">
+      <DependentUpon>acceptedListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\ItemLists\DrivingLicenseListItem.resx">
+      <DependentUpon>DrivingLicenseListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\ItemLists\ListItem.resx">
+      <DependentUpon>ListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\Requests.resx">
+      <DependentUpon>Requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\showUsers.resx">
+      <DependentUpon>showUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards Designs\CarLicenseDesign.resx">
+      <DependentUpon>CarLicenseDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards Designs\CruiseLicenseDesign.resx">
+      <DependentUpon>CruiseLicenseDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards Designs\DrivingLicenseDesign.resx">
+      <DependentUpon>DrivingLicenseDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards Designs\idCardDesign.resx">
+      <DependentUpon>idCardDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards Designs\WeaponLicenseDesign.resx">
+      <DependentUpon>WeaponLicenseDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Alert.resx">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\cameraForm.resx">
+      <DependentUpon>cameraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\Creaters\CreateCarLicense.resx">
+      <DependentUpon>CreateCarLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\Creaters\CreateCruiseLicense.resx">
+      <DependentUpon>CreateCruiseLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\Creaters\CreateDrivingLicense.resx">
+      <DependentUpon>CreateDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\Creaters\CreateId.resx">
+      <DependentUpon>CreateId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\Creaters\CreateWeaponLicense.resx">
+      <DependentUpon>CreateWeaponLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\finish.resx">
+      <DependentUpon>finish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\PaymentMethod.resx">
+      <DependentUpon>PaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\UserMain.resx">
+      <DependentUpon>UserMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\Verification.resx">
+      <DependentUpon>Verification.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\logo3.PNG" />
+    <None Include="Resources\logo3_TRANS.png" />
+    <None Include="Resources\logo3_TRANS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accepted.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rejected.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driving_L.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire_L.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRUISE_L.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steering-wheel-512 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steering.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire_L1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAR_L.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAR_L.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driveBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weaponBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boatBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IN PROGRESS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
